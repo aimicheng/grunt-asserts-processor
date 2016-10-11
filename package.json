@@ -1,0 +1,27 @@
+{
+  "name": "grunt-asserts-processor",
+  "version": "1.0.0",
+  "description": "Process .asserts file for js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimicheng/grunt-asserts-processor.git"
+  },
+  "author": "chengliu <aimicheng@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aimicheng/grunt-asserts-processor/issues"
+  },
+  "homepage": "https://github.com/aimicheng/grunt-asserts-processor#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-filerev": "^2.3.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-filerev-match-replace": "0.0.5"
+  }
+}

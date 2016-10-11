@@ -1,0 +1,5 @@
+{
+    "module_a": "/asserts/js/module-a.js",
+    "module_b": "/asserts/js/module-b.js",
+    "image.bg": "/asserts/images/bg.png"
+}
