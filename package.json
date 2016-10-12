@@ -1,10 +1,12 @@
 {
   "name": "grunt-asserts-processor",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Process .asserts file for js",
-  "main": "index.js",
+  "files": [
+    "tasks"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
