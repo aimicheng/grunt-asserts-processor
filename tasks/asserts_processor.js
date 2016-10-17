@@ -28,9 +28,11 @@ module.exports = function(grunt) {
             //console.log(filepath_rev);
             var asserts = JSON.parse(grunt.file.read(filepath));
             for (var name in asserts) {
-                var assert_url = asserts[name];
-                if (url_map[assert_url]) {
-                    asserts[name] = assert_url.replace(url_map[assert_url].origin, url_map[assert_url].rev);
+                var assert_url = asserts[name],
+                    replace_item;
+                replace_item = assert_url.startsWith('/') ? url_map[assert_url.substr(1)] : url_map[assert_url];
+                if (replace_item) {
+                    asserts[name] = assert_url.replace(replace_item.origin, replace_item.rev);
                     // process require js
                     if (!name.match(regex_js_subfix) && assert_url.match(regex_js_subfix)) {
                         asserts[name] = asserts[name].replace(regex_js_subfix, '');

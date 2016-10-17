@@ -1,9 +1,10 @@
 {
   "name": "grunt-asserts-processor",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Process .asserts file for js",
   "files": [
-    "tasks"
+    "tasks",
+    "lib"
   ],
   "scripts": {
     "test": "grunt"
