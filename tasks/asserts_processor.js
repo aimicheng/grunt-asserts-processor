@@ -1,5 +1,6 @@
 var utils = require('../lib/utils'),
-    filename = utils.filename;
+    filename = utils.filename,
+    regex_js_subfix = /\.js$/;
 
 module.exports = function(grunt) {
 
@@ -30,6 +31,10 @@ module.exports = function(grunt) {
                 var assert_url = asserts[name];
                 if (url_map[assert_url]) {
                     asserts[name] = assert_url.replace(url_map[assert_url].origin, url_map[assert_url].rev);
+                    // process require js
+                    if (!name.match(regex_js_subfix) && assert_url.match(regex_js_subfix)) {
+                        asserts[name] = asserts[name].replace(regex_js_subfix, '');
+                    }
                 }
             }
             var js_content = grunt.file.read(js_loc_rev);
